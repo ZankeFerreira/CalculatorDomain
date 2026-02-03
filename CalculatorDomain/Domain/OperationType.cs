@@ -1,4 +1,4 @@
-namespace CalculatorDomainDemo;
+namespace CalculatorDomain.Domain;
 
 /// <summary>
 /// This enum represents the ONLY operations our calculator allows.
@@ -14,8 +14,8 @@ namespace CalculatorDomainDemo;
 /// </summary>
 public enum OperationType
 {
-    Add,
-    Subtract,
-    Multiply,
-    Divide
+    Add = 0,
+    Subtract = 1,
+    Multiply = 2,
+    Divide = 3
 }

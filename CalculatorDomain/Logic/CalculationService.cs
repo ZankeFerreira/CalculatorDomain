@@ -1,6 +1,5 @@
-using CalculatorDomainDemo;
-using CalculatorDomainDemo.Domain;
-using CalculatorDomainDemo.Persistence;
+using CalculatorDomain.Domain;
+using CalculatorDomain.Persistence;
 
 namespace CalculatorDomain.Logic
 {

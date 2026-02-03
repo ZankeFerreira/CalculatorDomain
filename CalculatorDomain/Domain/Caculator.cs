@@ -1,5 +1,5 @@
 
-namespace CalculatorDomainDemo.Domain
+namespace CalculatorDomain.Domain
 {
     public class Calculation
     {

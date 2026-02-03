@@ -1,6 +1,6 @@
 using System.Text.Json;
-using CalculatorDomainDemo.Domain;
-using CalculatorDomainDemo.Persistence;
+using CalculatorDomain.Domain;
+using CalculatorDomain.Persistence;
 
 namespace CalculatorDomain.Persistence
 {
