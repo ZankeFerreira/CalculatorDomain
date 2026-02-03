@@ -1,0 +1,15 @@
+C:\Users\Training Center 1\Repos\CalculatorDomain\bin\Debug\net8.0\CalculatorDomain.exe
+C:\Users\Training Center 1\Repos\CalculatorDomain\bin\Debug\net8.0\CalculatorDomain.deps.json
+C:\Users\Training Center 1\Repos\CalculatorDomain\bin\Debug\net8.0\CalculatorDomain.runtimeconfig.json
+C:\Users\Training Center 1\Repos\CalculatorDomain\bin\Debug\net8.0\CalculatorDomain.dll
+C:\Users\Training Center 1\Repos\CalculatorDomain\bin\Debug\net8.0\CalculatorDomain.pdb
+C:\Users\Training Center 1\Repos\CalculatorDomain\obj\Debug\net8.0\CalculatorDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Training Center 1\Repos\CalculatorDomain\obj\Debug\net8.0\CalculatorDomain.AssemblyInfoInputs.cache
+C:\Users\Training Center 1\Repos\CalculatorDomain\obj\Debug\net8.0\CalculatorDomain.AssemblyInfo.cs
+C:\Users\Training Center 1\Repos\CalculatorDomain\obj\Debug\net8.0\CalculatorDomain.csproj.CoreCompileInputs.cache
+C:\Users\Training Center 1\Repos\CalculatorDomain\obj\Debug\net8.0\CalculatorDomain.sourcelink.json
+C:\Users\Training Center 1\Repos\CalculatorDomain\obj\Debug\net8.0\CalculatorDomain.dll
+C:\Users\Training Center 1\Repos\CalculatorDomain\obj\Debug\net8.0\refint\CalculatorDomain.dll
+C:\Users\Training Center 1\Repos\CalculatorDomain\obj\Debug\net8.0\CalculatorDomain.pdb
+C:\Users\Training Center 1\Repos\CalculatorDomain\obj\Debug\net8.0\CalculatorDomain.genruntimeconfig.cache
+C:\Users\Training Center 1\Repos\CalculatorDomain\obj\Debug\net8.0\ref\CalculatorDomain.dll
