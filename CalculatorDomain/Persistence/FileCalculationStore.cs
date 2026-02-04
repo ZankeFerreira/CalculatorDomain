@@ -7,21 +7,25 @@ namespace CalculatorDomain.Persistence
     public class FileCalculationStore : ICalculationStore
     {
         private readonly string _filePath;
+        private readonly string _directoryPath;
 
-        public FileCalculationStore(string filePath)
-        {
-            _filePath = filePath;
-        }
+        public FileCalculationStore(string directoryPath)
+    {
+        _directoryPath = directoryPath;
+        _filePath = Path.Combine(_directoryPath, "calculations.json");
+    }
 
-        public async Task SaveAsync(Calculation calculation)
-        {
-            var calculations = (await LoadAllAsync()).ToList();
-            calculations.Add(calculation);
+    public async Task SaveAsync(Calculation calculation)
+    {
+        if (!Directory.Exists(_directoryPath))
+            Directory.CreateDirectory(_directoryPath);
 
-            var json = JsonSerializer.Serialize(calculations);
-            await File.WriteAllTextAsync(_filePath, json);
-        }
+        var calculations = (await LoadAllAsync()).ToList();
+        calculations.Add(calculation);
 
+        var json = JsonSerializer.Serialize(calculations);
+        await File.WriteAllTextAsync(_filePath, json);
+    }
         public async Task<IReadOnlyList<Calculation>> LoadAllAsync()
         {
             if (!File.Exists(_filePath))

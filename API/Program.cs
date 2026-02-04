@@ -6,6 +6,16 @@ using CalculatorDomain.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var dataDirectory = Path.Combine(
+    builder.Environment.ContentRootPath,
+    "Data"
+);
+
+builder.Services.AddSingleton<ICalculationStore>(
+    new FileCalculationStore(dataDirectory)
+);
+
+
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddControllers();      //tells ASP.net that this applicatoin will use controllers
