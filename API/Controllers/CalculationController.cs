@@ -7,7 +7,7 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("api/calculations")]
-    public class CalculationsController: ControllerBase
+    public class CalculationsController : ControllerBase
     {
         private readonly CalculatorService _calculator;
 
@@ -25,10 +25,19 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Calculate(CalculationRequest request)
+        public async Task<IActionResult> Calculate([FromBody] CreateCalculationDto dto)
         {
-            var result = await _calculator.CalculateAsync(request);
-            return Ok(result);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+
+            }
+            else
+            {
+                CalculationRequest request = new CalculationRequest(dto.left, dto.right, dto.Operation);
+                var result = await _calculator.CalculateAsync(request);
+                return Ok(result);
+            }
         }
 
     }
