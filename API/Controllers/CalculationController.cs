@@ -1,9 +1,10 @@
-
-using CalculatorDomain.Logic;
 using CalculatorDomain.Domain;
+using CalculatorDomain.Logic;
 using Microsoft.AspNetCore.Mvc;
+using CalculatorDomain;
 
-namespace API.Controllers
+
+namespace API.controllers
 {
     [ApiController]
     [Route("api/calculations")]
@@ -16,29 +17,43 @@ namespace API.Controllers
             _calculator = calculator;
         }
 
-        [HttpGet]  //Get \api\calculations
-
+      /*  [HttpGet] //GET /api/calculations
         public async Task<IActionResult> GetAll()
         {
             var calculations = await _calculator.GetAllAsync();
             return Ok(calculations);
         }
-
-        [HttpPost]
+       */
+        [HttpPost] //POST /api/calculations
         public async Task<IActionResult> Calculate([FromBody] CreateCalculationDto dto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-
             }
             else
             {
-                CalculationRequest request = new CalculationRequest(dto.left, dto.right, dto.Operation);
-                var result = await _calculator.CalculateAsync(request);
-                return Ok(result);
+
+                var request = new CalculationRequest(
+                dto.left,
+                dto.right,
+                dto.Operation
+                );
+                var calculation = await _calculator.CalculateAsync(request);
+
+                var response = new CalculationResultDto
+                {
+                    Result = calculation.Result,
+                    Operation = calculation.Operation.ToString()
+                };
+
+                return Ok(response);
+
             }
+
+
         }
 
     }
+
 }
