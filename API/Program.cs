@@ -1,8 +1,6 @@
 using System.Reflection;
 using CalculatorDomain.Logic;
 using CalculatorDomain.Persistence;
-using CalculatorDomain.Persistence;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +22,9 @@ builder.Services.AddSingleton<ICalculationStore>(
 builder.Services.AddSingleton<CalculatorService>();
 
 var app = builder.Build();
+
+//Must add middleware between build and controller
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.MapControllers(); 
 
