@@ -4,6 +4,9 @@ using CalculatorDomain.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Options;
+using System.Text;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -54,7 +57,7 @@ builder.Services.AddAuthentication(options =>
 
         ValidIssuer = jwt["Issuer"],
         ValidAudience = jwt["Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt["Jwt:Key"])
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt["Key"])
     )
 
     };
@@ -63,23 +66,26 @@ builder.Services.AddAuthentication(options =>
 
 
 var app = builder.Build();
-app.UseAuthentication();
-app.UseAuthorization();
+
 
 using (var scope = app.Services.CreateScope())
 {
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-    var role = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
     await IdentitySeeder.SeedAsync(userManager, roleManager);
 }
 
+
+
+
+
 //Must add middleware between build and controller
 
 
-app.UseMiddleware<ExceptionHandlingMiddleware>();
 
-app.MapControllers();
+
+
 
 
 
@@ -90,8 +96,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
 
+//app.UseHttpsRedirection();
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
+app.MapControllers();
 
 
 app.Run();
