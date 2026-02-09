@@ -1,6 +1,9 @@
-using CalculatorDomain.Persistence;
+
 using CalculatorDomain.Domain;
 using Microsoft.EntityFrameworkCore;
+
+namespace CalculatorDomain.Persistence;
+
 public class EFCalculationStore: ICalculationStore
 {
     private readonly AppDbContext _context;

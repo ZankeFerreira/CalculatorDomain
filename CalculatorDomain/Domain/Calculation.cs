@@ -3,12 +3,12 @@ namespace CalculatorDomain.Domain
 {
     public class Calculation
     {
-        public int Id { get; }
-        public double Left { get; }
-        public double Right { get; }
-        public OperationType Operation { get; }
-        public double Result { get; }
-        public DateTime CreatedAt { get; } = DateTime.UtcNow;
+        public int Id { get; set;}
+        public double Left { get; set;}
+        public double Right { get; set;}
+        public OperationType Operation { get; set;}
+        public double Result { get; set;}
+        public DateTime CreatedAt { get; set;} = DateTime.UtcNow;
 
         public Calculation(
             double left,

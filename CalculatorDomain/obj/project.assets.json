@@ -8,24 +8,31 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Training Center 1\\.nuget\\packages\\": {}
+    "C:\\Users\\zanke\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Training Center 1\\Repos\\CalculatorDomain\\CalculatorDomain\\CalculatorDomain.csproj",
+      "projectUniqueName": "C:\\Users\\zanke\\CalculatorDomain\\CalculatorDomain\\CalculatorDomain.csproj",
       "projectName": "CalculatorDomain",
-      "projectPath": "C:\\Users\\Training Center 1\\Repos\\CalculatorDomain\\CalculatorDomain\\CalculatorDomain.csproj",
-      "packagesPath": "C:\\Users\\Training Center 1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Training Center 1\\Repos\\CalculatorDomain\\CalculatorDomain\\obj\\",
+      "projectPath": "C:\\Users\\zanke\\CalculatorDomain\\CalculatorDomain\\CalculatorDomain.csproj",
+      "packagesPath": "C:\\Users\\zanke\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zanke\\CalculatorDomain\\CalculatorDomain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Training Center 1\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\zanke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

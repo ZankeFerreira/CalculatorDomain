@@ -1,3 +1,4 @@
+namespace API.DTOs;
 public class CalculationResultDto
 {
     public double Result { get; set; }

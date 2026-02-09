@@ -1,3 +1,4 @@
+namespace API.DTOs;
 public class CalculationHistoryItemDto
 {
     public double Left { get; set; }

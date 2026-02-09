@@ -15,7 +15,7 @@ public class AppDbContext: IdentityDbContext<ApplicationUser, IdentityRole, stri
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
 
-        
+        base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Calculation>().HasKey(c => c.Id);
 
     

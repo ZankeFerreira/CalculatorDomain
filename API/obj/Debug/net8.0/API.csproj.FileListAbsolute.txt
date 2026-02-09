@@ -35,44 +35,6 @@ C:\Users\Training Center 1\Repos\CalculatorDomain\API\obj\Debug\net8.0\API.pdb
 C:\Users\Training Center 1\Repos\CalculatorDomain\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\Training Center 1\Repos\CalculatorDomain\API\obj\Debug\net8.0\ref\API.dll
 C:\Users\Training Center 1\Repos\CalculatorDomain\API\bin\Debug\net8.0\Data\calculation.json\calculations.json
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.csproj.AssemblyReference.cache
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.AssemblyInfoInputs.cache
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.AssemblyInfo.cs
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.sourcelink.json
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.dll
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\refint\API.dll
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.pdb
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\appsettings.json
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Data\calculation.json\calculations.json
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\API.exe
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\API.deps.json
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\API.runtimeconfig.json
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\API.dll
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\API.pdb
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.OpenApi.dll
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\CalculatorDomain.dll
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\CalculatorDomain.pdb
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets\msbuild.build.API.props
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.API.props
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.API.props
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\scopedcss\bundle\API.styles.css
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.csproj.Up2Date
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.genruntimeconfig.cache
-C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\ref\API.dll
-C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Data\calculations.json
 C:\Users\Training Center 1\Repos\CalculatorDomain\API\bin\Debug\net8.0\Data\calculations.json
 C:\Users\Training Center 1\Repos\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Training Center 1\Repos\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -178,9 +140,27 @@ C:\Users\Training Center 1\Repos\CalculatorDomain\API\bin\Debug\net8.0\ru\Micros
 C:\Users\Training Center 1\Repos\CalculatorDomain\API\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Training Center 1\Repos\CalculatorDomain\API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Training Center 1\Repos\CalculatorDomain\API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.csproj.AssemblyReference.cache
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.AssemblyInfoInputs.cache
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.AssemblyInfo.cs
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.sourcelink.json
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\appsettings.json
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Data\calculation.json\calculations.json
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Data\calculations.json
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\API.exe
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\API.deps.json
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\API.runtimeconfig.json
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\API.dll
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\API.pdb
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Humanizer.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -199,10 +179,14 @@ C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.IdentityModel.Log
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\SQLitePCLRaw.core.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\System.Composition.Convention.dll
@@ -282,3 +266,19 @@ C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\runtimes\win-arm\native\e_s
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\CalculatorDomain.dll
+C:\Users\zanke\CalculatorDomain\API\bin\Debug\net8.0\CalculatorDomain.pdb
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets\msbuild.build.API.props
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.API.props
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.API.props
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\scopedcss\bundle\API.styles.css
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.csproj.Up2Date
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.dll
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\refint\API.dll
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.pdb
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\API.genruntimeconfig.cache
+C:\Users\zanke\CalculatorDomain\API\obj\Debug\net8.0\ref\API.dll

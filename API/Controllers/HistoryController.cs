@@ -1,6 +1,8 @@
 using CalculatorDomain.Logic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using CalculatorDomain.Persistence;
+namespace API.DTOs;
 
 [ApiController]
 [Route("api/history")]
