@@ -18,13 +18,13 @@ namespace CalculatorDomain.Persistence
     public async Task SaveAsync(Calculation calculation)
     {
         if (!Directory.Exists(_directoryPath))
-            Directory.CreateDirectory(_directoryPath);
+                Directory.CreateDirectory(_directoryPath);
 
-        var calculations = (await LoadAllAsync()).ToList();
-        calculations.Add(calculation);
+            var calculations = (await LoadAllAsync()).ToList();
+            calculations.Add(calculation);
 
-        var json = JsonSerializer.Serialize(calculations);
-        await File.WriteAllTextAsync(_filePath, json);
+            var json = JsonSerializer.Serialize(calculations);
+            await File.WriteAllTextAsync(_filePath, json);
     }
         public async Task<IReadOnlyList<Calculation>> LoadAllAsync()
         {
@@ -36,10 +36,8 @@ namespace CalculatorDomain.Persistence
             if (string.IsNullOrWhiteSpace(json))
                 return new List<Calculation>();
 
-            List<Calculation> calculations = JsonSerializer.Deserialize<List<Calculation>>(json)
-            ?? new List<Calculation>();
-
-            return calculations;
+            return JsonSerializer.Deserialize<List<Calculation>>(json)
+                   ?? new List<Calculation>();
         }
     }
 }

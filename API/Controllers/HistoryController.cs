@@ -8,16 +8,18 @@ using Microsoft.AspNetCore.Authorization;
 public class HistoryController : ControllerBase
 {
     private readonly CalculatorService _calculator;
+    private readonly EFCalculationStore _context;
 
-    public HistoryController(CalculatorService calculator)
+    public HistoryController(CalculatorService calculator, EFCalculationStore context)
     {
         _calculator = calculator;
+        _context = context;
     }
 
     [HttpGet]
     public async Task<IActionResult> GetHistory()
     {
-        var history = await _calculator.GetAllAsync();
+        var history = await _context.LoadAllAsync();
 
         var response = history.Select(c => new CalculationHistoryItemDto
         {

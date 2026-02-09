@@ -22,12 +22,8 @@ builder.Services.AddSingleton<ICalculationStore>(
 
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options =>
-options.UseSqlite("Data source = Calculator.db")); //Use same name for database
+options.UseSqlite(builder.Configuration.GetConnectionString("CalculatorDb"))); //Use same name for database
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
-
-
-
-
 
 
 builder.Services.AddControllers(); //tells ASP.NET that this application will use controllers as entry points
@@ -77,17 +73,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 
-
-
-
 //Must add middleware between build and controller
-
-
-
-
-
-
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
