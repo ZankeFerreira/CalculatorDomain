@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260209170401_Test")]
+    [Migration("20260210100919_Test")]
     partial class Test
     {
         /// <inheritdoc />
@@ -107,6 +107,17 @@ namespace API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Calculation");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2026, 2, 10, 10, 9, 18, 553, DateTimeKind.Utc).AddTicks(6210),
+                            Left = 2.0,
+                            Operation = 0,
+                            Result = 5.0,
+                            Right = 5.0
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

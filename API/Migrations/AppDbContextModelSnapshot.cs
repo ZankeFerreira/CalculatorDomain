@@ -104,6 +104,17 @@ namespace API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Calculation");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2026, 2, 10, 10, 9, 18, 553, DateTimeKind.Utc).AddTicks(6210),
+                            Left = 2.0,
+                            Operation = 0,
+                            Result = 5.0,
+                            Right = 5.0
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

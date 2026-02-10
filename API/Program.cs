@@ -64,16 +64,16 @@ builder.Services.AddAuthentication(options =>
 var app = builder.Build();
 
 
-using (var scope = app.Services.CreateScope())
-{
-    var dbContenxt = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    await dbContenxt.Database.EnsureCreatedAsync();
+// using (var scope = app.Services.CreateScope())
+// {
+//     var dbContenxt = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+//     await dbContenxt.Database.EnsureCreatedAsync();
 
-    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+//     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+//     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-    await IdentitySeeder.SeedAsync(userManager, roleManager);
-}
+//     await IdentitySeeder.SeedAsync(userManager, roleManager);
+// }
 
 
 //Must add middleware between build and controller

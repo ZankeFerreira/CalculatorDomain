@@ -6,46 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace API.Migrations
 {
     /// <inheritdoc />
-    public partial class Test : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<DateTime>(
-                name: "CreatedAt",
-                table: "Calculation",
-                type: "TEXT",
-                nullable: false,
-                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
-
-            migrationBuilder.AddColumn<double>(
-                name: "Left",
-                table: "Calculation",
-                type: "REAL",
-                nullable: false,
-                defaultValue: 0.0);
-
-            migrationBuilder.AddColumn<int>(
-                name: "Operation",
-                table: "Calculation",
-                type: "INTEGER",
-                nullable: false,
-                defaultValue: 0);
-
-            migrationBuilder.AddColumn<double>(
-                name: "Result",
-                table: "Calculation",
-                type: "REAL",
-                nullable: false,
-                defaultValue: 0.0);
-
-            migrationBuilder.AddColumn<double>(
-                name: "Right",
-                table: "Calculation",
-                type: "REAL",
-                nullable: false,
-                defaultValue: 0.0);
-
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -83,6 +48,23 @@ namespace API.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Calculation",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Left = table.Column<double>(type: "REAL", nullable: false),
+                    Right = table.Column<double>(type: "REAL", nullable: false),
+                    Operation = table.Column<int>(type: "INTEGER", nullable: false),
+                    Result = table.Column<double>(type: "REAL", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Calculation", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -248,30 +230,13 @@ namespace API.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Calculation");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
-                name: "CreatedAt",
-                table: "Calculation");
-
-            migrationBuilder.DropColumn(
-                name: "Left",
-                table: "Calculation");
-
-            migrationBuilder.DropColumn(
-                name: "Operation",
-                table: "Calculation");
-
-            migrationBuilder.DropColumn(
-                name: "Result",
-                table: "Calculation");
-
-            migrationBuilder.DropColumn(
-                name: "Right",
-                table: "Calculation");
         }
     }
 }

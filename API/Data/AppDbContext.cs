@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using CalculatorDomain.Domain;
+
+
 using Microsoft.AspNetCore.Identity;
 
 
@@ -16,7 +18,16 @@ public class AppDbContext: IdentityDbContext<ApplicationUser, IdentityRole, stri
     {
 
         base.OnModelCreating(modelBuilder);
-        modelBuilder.Entity<Calculation>().HasKey(c => c.Id);
+        modelBuilder.Entity<Calculation>().HasData(new Calculation{
+            Id = 2,
+            Left = 2,
+            Right= 5,
+            Operation = OperationType.Add,
+            Result = 5,
+            CreatedAt = DateTime.UtcNow
+        }
+        );
+        //.HasKey(c => c.Id);
 
     
 

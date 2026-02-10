@@ -24,6 +24,6 @@ namespace CalculatorDomain.Domain
             CreatedAt = DateTime.UtcNow;
         }
 
-        private Calculation(){}
+        public Calculation(){}
     }
 }
