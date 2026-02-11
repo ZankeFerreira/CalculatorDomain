@@ -11,10 +11,11 @@ using API.DTOs;
 public class HistoryController : ControllerBase
 {
     private readonly AppDbContext _context; 
-
-    public HistoryController(AppDbContext context)
+    private readonly EFCalculationStore _store;
+    public HistoryController(AppDbContext context, EFCalculationStore store)
     {
         _context = context; 
+        _store = store;
     }
 
     [HttpGet]
@@ -23,6 +24,22 @@ public class HistoryController : ControllerBase
         var history = await _context.Calculations.ToListAsync();
 
         var response = history.Select(c => new CalculationHistoryItemDto
+        {
+            Left = c.Left,
+            Right = c.Right,
+            Operation = c.Operation.ToString(),
+            Result = c.Result
+        });
+
+        return Ok(response);
+    }
+
+    [HttpGet("adds")]
+    public async Task <IActionResult> GetAdd()
+    {
+        var adds = _store.LoadAllAddsAsync();
+        
+        var response = adds.Result.Select(c => new CalculationHistoryItemDto
         {
             Left = c.Left,
             Right = c.Right,

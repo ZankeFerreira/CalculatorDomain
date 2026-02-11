@@ -1,12 +1,14 @@
 
 using CalculatorDomain.Domain;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace CalculatorDomain.Persistence;
 
 public class EFCalculationStore: ICalculationStore
 {
     private readonly AppDbContext _context;
+    
 
     public EFCalculationStore(AppDbContext dbcontext)
     {
@@ -20,6 +22,13 @@ public class EFCalculationStore: ICalculationStore
 
     public async Task<IReadOnlyList<Calculation>> LoadAllAsync()
     {
-        return await _context.Calculations.OrderByDescending(c => c.CreatedAt).ToListAsync();
+        return await _context.Calculations.ToListAsync();
     }  
+
+    public async Task <IEnumerable<Calculation>> LoadAllAddsAsync()
+    {
+        var all =  await LoadAllAsync();
+
+        return all.Where(r => r.Operation == OperationType.Add);
+    }
 }

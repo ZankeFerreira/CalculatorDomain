@@ -1,4 +1,4 @@
-namespace CalculatorDomain.Domain;
+namespace CalculatorDomain;
 
 /// <summary>
 /// This enum represents the ONLY operations our calculator allows.

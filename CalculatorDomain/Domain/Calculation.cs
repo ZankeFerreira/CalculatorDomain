@@ -11,17 +11,20 @@ namespace CalculatorDomain.Domain
         public DateTime CreatedAt { get; set;} = DateTime.UtcNow;
 
         public Calculation(
+            int id,
             double left,
             double right,
             OperationType operation,
-            double result)
+            double result,
+            DateTime createdAt)
         {
           
+            Id = id;
             Left = left;
             Right = right;
             Operation = operation;
             Result = result;
-            CreatedAt = DateTime.UtcNow;
+            CreatedAt = createdAt;
         }
 
         public Calculation(){}
