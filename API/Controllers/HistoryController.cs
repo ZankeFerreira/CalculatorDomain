@@ -1,27 +1,26 @@
 using CalculatorDomain.Logic;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 using CalculatorDomain.Persistence;
-namespace API.DTOs;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using API.DTOs;
 
 [ApiController]
 [Route("api/history")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles ="Admin")]
 public class HistoryController : ControllerBase
 {
-    private readonly CalculatorService _calculator;
-    private readonly EFCalculationStore _context;
+    private readonly AppDbContext _context; 
 
-    public HistoryController(CalculatorService calculator, EFCalculationStore context)
+    public HistoryController(AppDbContext context)
     {
-        _calculator = calculator;
-        _context = context;
+        _context = context; 
     }
 
     [HttpGet]
     public async Task<IActionResult> GetHistory()
     {
-        var history = await _context.LoadAllAsync();
+        var history = await _context.Calculations.ToListAsync();
 
         var response = history.Select(c => new CalculationHistoryItemDto
         {

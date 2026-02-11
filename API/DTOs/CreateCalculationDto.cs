@@ -1,5 +1,6 @@
 using CalculatorDomain.Domain;
 using System.ComponentModel.DataAnnotations;
+using CalculatorDomain;
 
 namespace API.DTOs;
 public class CreateCalculationDto
