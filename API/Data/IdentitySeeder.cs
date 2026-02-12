@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using CalculatorDomain.Domain;
 
 public static class IdentitySeeder
 {

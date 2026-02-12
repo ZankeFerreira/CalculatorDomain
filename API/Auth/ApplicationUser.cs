@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
-public class ApplicationUser : IdentityUser
-{
-    //Extend as needed
-}
+using CalculatorDomain.Domain;
+
+// ApplicationUser is now defined in CalculatorDomainDemo.Domain
+// This file remains for backwards compatibility
+// Use: CalculatorDomainDemo.Domain.ApplicationUser

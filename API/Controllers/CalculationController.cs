@@ -2,11 +2,10 @@ using API.DTOs;
 using CalculatorDomain.Logic;
 using Microsoft.AspNetCore.Mvc;
 using CalculatorDomain;
-using CalculatorDomain.Domain;
-
 using CalculatorDomain.Persistence;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 
 namespace API.controllers
@@ -31,6 +30,7 @@ namespace API.controllers
         {
             var results = await _context.Calculations
                 .Where(c => c.Operation == operation)
+                .Include(c => c.User)
                 .ToListAsync();
 
             return Ok(results);
@@ -44,6 +44,7 @@ namespace API.controllers
         {
             var results = await _context.Calculations
                 .Where(c => c.Result >= min && c.Result <= max)
+                .Include(c => c.User)
                 .ToListAsync();
 
             return Ok(results);
@@ -54,6 +55,8 @@ namespace API.controllers
         public async Task<IActionResult> GetSummary()
         {
             var results = await _context.Calculations
+             .Where(c => c.IsActive)
+                .Include(c => c.User)
                 .Select(c => new CalculationSummaryDto
                 {
                     Id = c.Id,
@@ -72,7 +75,10 @@ namespace API.controllers
             [FromQuery] int pageSize = 10,
             [FromQuery] string? sortBy = null)
         {
-            var query = _context.Calculations.AsQueryable();
+            var query = _context.Calculations
+             .Where(c => c.IsActive)
+                .Include(c => c.User)
+                .AsQueryable();
 
             // DEMO 6 — Sorting
             if (sortBy == "result")
@@ -107,7 +113,9 @@ namespace API.controllers
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 10)
         {
-            var query = _context.Calculations.AsQueryable();
+            var query = _context.Calculations
+              .Where(c => c.IsActive)
+              .AsQueryable();
 
             if (operation.HasValue)
                 query = query.Where(c => c.Operation == operation.Value);
@@ -116,6 +124,7 @@ namespace API.controllers
 
             var data = await query
                 .AsNoTracking()
+                .Include(c => c.User)
                 .OrderByDescending(c => c.Id)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
@@ -133,12 +142,17 @@ namespace API.controllers
         [HttpPost] //POST /api/calculations
         public async Task<IActionResult> Calculate([FromBody] CreateCalculationDto dto)
         {
+             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized("User ID not found in token");
+
             var request = new CalculationRequest(
                 dto.left,
                 dto.right,
                 dto.Operation
             );
-            var calculation = await _calculator.CalculateAsync(request);
+            var calculation = await _calculator.CalculateAsync(request, userId);
 
             var response = new CalculationResultDto
             {

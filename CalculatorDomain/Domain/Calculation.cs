@@ -1,4 +1,4 @@
-
+using CalculatorDomain.Domain;
 namespace CalculatorDomain.Domain
 {
     public class Calculation
@@ -9,24 +9,14 @@ namespace CalculatorDomain.Domain
         public OperationType Operation { get; set;}
         public double Result { get; set;}
         public DateTime CreatedAt { get; set;} = DateTime.UtcNow;
+        //Foreign key
+        public string UserId { get; set; }
 
-        public Calculation(
-            int id,
-            double left,
-            double right,
-            OperationType operation,
-            double result,
-            DateTime createdAt)
-        {
-          
-            Id = id;
-            Left = left;
-            Right = right;
-            Operation = operation;
-            Result = result;
-            CreatedAt = createdAt;
-        }
+        // Navigation property
+        public ApplicationUser User { get; set; }
 
-        public Calculation(){}
+        // Soft delete fields
+        public bool IsActive { get; set; } = true;
+        public DateTime? DeletedAt { get; set; }
     }
 }

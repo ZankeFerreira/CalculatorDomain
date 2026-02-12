@@ -21,7 +21,11 @@ public class HistoryController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetHistory()
     {
-        var history = await _context.Calculations.ToListAsync();
+        var history = await _context.Calculations
+        .Where(c => c.IsActive)
+            .Include(c => c.User)
+            .OrderByDescending(c => c.CreatedAt)
+            .ToListAsync();
 
         var response = history.Select(c => new CalculationHistoryItemDto
         {

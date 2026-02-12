@@ -13,27 +13,30 @@ namespace CalculatorDomain.Logic
             _store = store;
         }
 
-        public async Task<Calculation> CalculateAsync(CalculationRequest request)
+        public async Task<Calculation> CalculateAsync(CalculationRequest request, string userId)
         {
             if (request.Operation == OperationType.Divide && request.right == 0)
                 throw new InvalidOperationException("Division by zero is not allowed.");
 
             double result = request.Operation switch
             {
-                OperationType.Add => request.left + request.right,
-                OperationType.Subtract => request.left - request.right,
-                OperationType.Multiply => request.left * request.right,
-                OperationType.Divide => request.left / request.right,
+                OperationType.Add => request.Left + request.right,
+                OperationType.Subtract => request.Left - request.right,
+                OperationType.Multiply => request.Left * request.right,
+                OperationType.Divide => request.Left / request.right,
                 _ => throw new InvalidOperationException("Unsupported operation.")
             };
 
-            var calculation = new Calculation(
-                0, // id will be set by the store
-                request.left,
-                request.right,
-                request.Operation,
-                result,
-                DateTime.UtcNow);
+            var calculation = new Calculation
+            {
+                Left = request.Left,
+                Right = request.right,
+                Operation = request.Operation,
+                Result = result,
+                CreatedAt = DateTime.UtcNow,
+                UserId = userId,
+                IsActive = true
+            };
 
             await _store.SaveAsync(calculation);
 

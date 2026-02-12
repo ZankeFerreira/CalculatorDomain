@@ -22,3 +22,4 @@ C:\Users\zanke\CalculatorDomain\CalculatorDomain\obj\Debug\net8.0\CalculatorDoma
 C:\Users\zanke\CalculatorDomain\CalculatorDomain\obj\Debug\net8.0\refint\CalculatorDomain.dll
 C:\Users\zanke\CalculatorDomain\CalculatorDomain\obj\Debug\net8.0\CalculatorDomain.pdb
 C:\Users\zanke\CalculatorDomain\CalculatorDomain\obj\Debug\net8.0\ref\CalculatorDomain.dll
+C:\Users\Training Center 1\Repos\CalculatorDomain\CalculatorDomain\obj\Debug\net8.0\CalculatorDomain.csproj.AssemblyReference.cache

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 
+
 public class AppDbContext
     : IdentityDbContext<ApplicationUser, IdentityRole, string>
 {
@@ -18,8 +19,15 @@ public class AppDbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
         modelBuilder.Entity<Calculation>().ToTable("Calculation")
             .HasKey(c => c.Id);
+             // Configure relationship
+        modelBuilder.Entity<Calculation>()
+            .HasOne(c => c.User)
+            .WithMany()
+            .HasForeignKey(c => c.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 
 }
